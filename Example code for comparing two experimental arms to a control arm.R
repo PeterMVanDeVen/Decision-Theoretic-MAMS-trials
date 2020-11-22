@@ -49,7 +49,7 @@ Ntrials <- 1000
 # properties of the trial are to be evaluated
 # First entry corresponds to control arm 
 # We consider both a null scenario (resp0) and an alternative
-# scenario (respA)
+# scenario (resp1)
 
 resp0 <- c(0.20,0.20,0.20)
 resp1 <- c(0.20,0.20,0.35)
@@ -70,15 +70,15 @@ delta <- 0.1
 dropctrl <- FALSE
 
 # Specify batch size for stage 1 
-# 'burn' should be specified as the total batch size divided by
-# the number of arms at start.
+# 'burn' should be specified as the number of subjects in the stage divided by
+# the number of arms at start of the trial
 # 'burn <- 48' here corresponds to 3*48=144 subjects in the first stage
 
 burn <- 48
 
 # Specify the batch size for stage 2, 3, etc. 
-# 'batch' should be specified as the total batch size divided 
-# the number of arms at start
+# 'batch' should be specified as the number of subjects per stage divided by
+# the number of arms at start of the trial
 # 'batch <- 12' here corresponds to 36 subjects in each of the stages 
 # 2, 3, ...
 
